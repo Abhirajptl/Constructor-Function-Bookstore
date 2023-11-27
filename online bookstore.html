@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+    function Author(name, birthYear, nationality){
+        this.name = name;
+        this.birthYear = birthYear;
+        this.nationality = nationality;
+    }
+
+    function Book(title, author, genre, price){
+        this.title = title;
+        this.author = author;
+        this.genre = genre;
+        this.price = price;
+
+        this.getBookInfo = function(){
+            console.log(this.title);
+            console.log(this.author.name);
+            console.log(this.genre);
+            console.log(this.price);
+        }
+    }
+
+    let author1 = new Author("Abhi",1999,"Indian");
+    let author2 = new Author("Raj",1998,"American");
+    let author3 = new Author("JK Rowling",1999,"Italian");
+    let author4 = new Author("Jhumpa Lahiri",1997,"Korean");
+
+    let book1 = new Book("Gone with the Wind",author1,"Fiction",500);
+    let book2 = new Book("The Unbearable Lightness of Being",author2,"Folktale",400);
+    let book3 = new Book("The Christmas Pig",author3,"Fiction",600);
+    let book4 = new Book("Whereabouts",author3,"Mystery",700);
+    
+    // console.log(book1);
+    // console.log(book2);
+
+    book1.getBookInfo();
+    book2.getBookInfo();
+    book3.getBookInfo();
+    book4.getBookInfo();
+</script>
+</html>
